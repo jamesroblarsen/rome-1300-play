@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rome 1300</title>
+  <script type="module" crossorigin src="./assets/index-YvAL1hlf.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BiFOrv5k.css">
+</head>
+<body>
+  <div id="app">
+    <header id="hud">
+      <div id="hud-money" aria-label="Money"></div>
+      <div id="hud-place"></div>
+      <div id="hud-time">
+        <div id="hud-health" title="Health"></div>
+        <div id="hud-dial" aria-hidden="true"></div>
+        <div id="hud-date"><div class="big"></div><div class="small"></div><div class="deadline"></div></div>
+      </div>
+    </header>
+    <main>
+      <section id="map-wrap" aria-label="Local map">
+        <svg id="map" role="img" aria-label="Map around your position"></svg>
+        <div id="map-controls">
+          <button id="zoom-in" title="Zoom in" aria-label="Zoom in">+</button>
+          <button id="zoom-out" title="Zoom out" aria-label="Zoom out">−</button>
+          <button id="recenter" title="Recenter on yourself" aria-label="Recenter">◎</button>
+          <button id="speed" title="Travel animation speed">▶ 1×</button>
+        </div>
+        <div id="weather-chip"></div>
+        <div id="trail" hidden aria-label="The road you are walking"></div>
+      </section>
+      <section id="panel" aria-live="polite">
+        <h1 id="title"></h1>
+        <div id="text"></div>
+        <div id="choices"></div>
+        <details id="log-wrap"><summary>Recent events</summary><div id="log"></div></details>
+      </section>
+    </main>
+    <footer id="toolbar">
+      <button data-open="journal">Journal</button>
+      <button data-open="bag">Bag &amp; purse</button>
+      <button data-open="saves">Save / load</button>
+      <span id="build-tag"></span>
+    </footer>
+    <div id="talk" hidden role="dialog" aria-label="Conversation">
+      <div id="talk-left"><div id="talk-topics"></div><div id="talk-actions"></div></div>
+      <div id="talk-right"><div id="talk-profile"></div><div id="talk-lines" aria-live="polite"></div></div>
+    </div>
+    <div id="shop" hidden role="dialog" aria-label="Market">
+      <div id="shop-left"><h2 id="shop-title"></h2><div id="shop-text"></div><div id="shop-goods"></div><div id="shop-actions"></div></div>
+      <div id="shop-right"><h3>Your bag</h3><div id="shop-weight"></div><div id="shop-bag"></div><div id="shop-msg" role="status" aria-live="polite"></div></div>
+    </div>
+    <div id="overlay" hidden><div id="overlay-box" role="dialog" aria-modal="true"><button id="overlay-close" aria-label="Close">×</button><div id="overlay-body"></div></div></div>
+  </div>
+</body>
+</html>
